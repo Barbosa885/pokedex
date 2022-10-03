@@ -9,7 +9,7 @@ const Home = () => {
   
   useEffect(() => {
     api
-      .get("/pokemon")
+      .get("/pokedex/2")
       .then((response) => {
         setPokemon(response.data);
       })
