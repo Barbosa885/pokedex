@@ -1,24 +1,11 @@
-import React, { useEffect, useState } from "react";
-import api from "./services/api"
+import React from "react";
+import Home from "./pages/home";
 
 function App() {
-  const [pokemon, setPokemon] = useState([])
-
-  useEffect(() => {
-    api
-    .get("pokemon/")
-    .then(({data}) => {
-      setPokemon(data)
-    })
-    console.log(pokemon)
-  }, [])
-  
-
-  return (
-    <div className="App">
-      
-    </div>
-  )
+  return(
+    <Home />
+  );
 }
 
-export default App
+
+export default App;
