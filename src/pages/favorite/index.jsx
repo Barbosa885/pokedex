@@ -4,7 +4,7 @@ import * as styled from "./styles";
 const Favorite = () => {
   return (
     <styled.Container>
-      <h1>Favorites</h1>
+      <h1></h1>
     </styled.Container>
   );
 }

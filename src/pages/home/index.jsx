@@ -9,18 +9,24 @@ const Home = () => {
   
   useEffect(() => {
     api
-      .get("/pokedex/2")
+      .get("/pokemon?limit=151")
       .then((response) => {
-        setPokemon(response.data);
+        setPokemon(response.data.results);
+        console.log(response.data.results);
       })
       .catch((error) => {
-        console.log(error);
+        error;
       });
   }, []);
 
+
   return (
     <styled.Container>
-      <h1>Home</h1>
+      {pokemon.map((pokemon) => (
+        <styled.Card key={pokemon.name}>
+          {pokemon.name}
+        </styled.Card>
+      ))}
     </styled.Container>
   );
 }
