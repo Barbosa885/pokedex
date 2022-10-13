@@ -4,8 +4,8 @@ import styled from "styled-components";
 const CardComponent = ({ name, image }) => {
   return (
     <Card>
-      <CardImage>
-        <img src={image} />
+      <CardImage >
+        <img src={image} alt={name} />
       </CardImage>
       <PokemonName>{name}</PokemonName>
     </Card>
